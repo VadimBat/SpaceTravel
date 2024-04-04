@@ -1,6 +1,7 @@
 package com.goit.client;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
@@ -13,6 +14,7 @@ public class Client {
     private Long id;
 
     @Column
+    @Size(min = 3, max = 200)
     private String name;
 
 }

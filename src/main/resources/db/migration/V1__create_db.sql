@@ -7,7 +7,7 @@ CREATE TABLE planet (
     id VARCHAR(100) PRIMARY KEY ,
     name VARCHAR(500) CHECK(CHAR_LENGTH(name)>1),
     CONSTRAINT UpperCaseCheck CHECK (id = UPPER(id)),
-    CONSTRAINT LatinCharactersCheck CHECK (REGEXP_LIKE(id, '^[a-zA-Z]+$'))
+    CONSTRAINT LatinCharactersCheck CHECK (REGEXP_LIKE(id, '^[0-9A-Z]+$'))
 );
 
 CREATE TABLE ticket (
